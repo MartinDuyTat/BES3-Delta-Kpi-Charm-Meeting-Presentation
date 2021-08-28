@@ -47,13 +47,13 @@
 \newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[University of Oxford]{BESIII Charm Meeting}
+\title[University of Oxford]{BESIII Charm Meeting \\Measurement of $\delta_D^{K\pi}$ with $D\to K_{S, L}\pi^+\pi^-$ tags}
 \author{Martin Tat}
-%\institute{University of Oxford}
+\institute{University of Oxford}
 \date{31st August 2021}
 
-\titlegraphic{\includegraphics[width = 3.5cm, height = 3.5cm]{OxfordLogo.pdf}\hspace{1cm}~%
-              \includegraphics[width = 4.5cm, height = 3.5cm]{bes3.jpg}}
+\titlegraphic{\includegraphics[width = 2.5cm, height = 2.5cm]{OxfordLogo.pdf}\hspace{1cm}~%
+              \includegraphics[width = 3.5cm, height = 2.5cm]{bes3.jpg}}
 
 \begin{document}
 
@@ -77,7 +77,7 @@
       \item{Measurement of \underline{both} $r_D^{K\pi}\cos\delta_D^{K\pi}$ and $r_D^{K\pi}\sin\delta_D^{K\pi}$}
       \item{Equal-$\Delta\delta_D$ phase space binning}
       \item{Double tag yields taken from \href{https://doi.org/10.1103/PhysRevD.101.112002}{Phys. Rev. D \textbf{101} (2020)}}
-      \item{$K_i$, $c_i$, $s_i$ re-determined without $D\to K^-\pi^+$ inputs}
+      \item{$K_i$, $c_i$, $s_i$ re-determined without $D\to K^-\pi^+$ inputs (by Lei Li)}
     \end{itemize}
     \column{0.50\linewidth}
     \centering
@@ -103,15 +103,14 @@
     \item{$c_i$ and $s_i$: Amplitude-averaged strong phases}
     \begin{itemize}
       \setlength\itemsep{0.5em}
-      \item{CP tags}
-      \item{No $D\to K^-\pi^+$ inputs}
+      \item{Updated with no $D\to K^-\pi^+$ inputs}
     \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Fit setup and results}
   \begin{itemize}
-    \setlength\itemsep{1.5em}
+    \setlength\itemsep{1.0em}
     \item{Minimize $\chi^2 = \sum\Big(\frac{Y_{\rm obs} - Y_{\rm exp}}{\Delta Y_{\rm obs}}\Big)^2$}
     \begin{itemize}
       \item{$\Delta Y_{\rm obs}$ statistical uncertainty only}
@@ -122,27 +121,41 @@
       \item{$c_i$, $s_i$: Gaussian smearing according to correlations and uncertainties}
     \end{itemize}
   \end{itemize}
-  \vspace{0.3cm}
   \begin{block}{Final results}
     \vspace{0.1cm}
     $r_D^{K\pi}\cos\delta_D^{K\pi} = -0.0547\pm0.0084\pm0.0049\pm0.0010$ \\
     \vspace{0.3cm}
-    $r_D^{K\pi}\sin\delta_D^{K\pi} = -0.010\pm0.012\pm0.007\pm0.0003$
+    $r_D^{K\pi}\sin\delta_D^{K\pi} = -0.010\pm0.012\pm0.007\pm0.003$ \\
     \vspace{0.1cm}
+    Uncertainties: Statistical $\pm$ $K_i$ systematics $\pm$ $c_i$/$s_i$ systematics
   \end{block}
-  \begin{itemize}
-    \item{Uncertainties: Statistical $\pm$ $K_i$ systematics $\pm$ $c_i$/$s_i$ systematics}
-  \end{itemize}
+  \vspace{-0.2cm}
+  \begin{columns}
+    \column{0.50\linewidth}
+    \begin{itemize}
+      \vspace{0.1cm}
+      \item{$r_D^{K\pi}\cos\delta_D^{K\pi}$/$r_D^{K\pi}\sin\delta_D^{K\pi}$ correlations are small:}
+    \end{itemize}
+    \column{0.50\linewidth}
+    \begin{tabular}{lrrr}
+      \\
+      \hline
+      $K^-\pi^+$ & $K_i^{(\prime)}$ & $c_i^{(\prime)}, s_i^{(\prime)}$ \\
+      \hline
+      0.035      & -0.005           & 0.021 \\
+      \hline
+    \end{tabular}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{Bin yield yield vs prediction}
+\begin{frame}{Bin yield yield vs fit prediction}
   \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{KSpipiVersusKpiYields.png}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Bin yield yield vs prediction}
+\begin{frame}{Bin yield yield vs fit prediction}
   \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{KLpipiVersusKpiYields.png}
@@ -173,5 +186,51 @@
     \hline
   \end{tabular}
 \end{frame}
+
+\begin{frame}{Combination of measurements}
+  \begin{columns}
+    \column{0.35\linewidth}
+    Inputs to combination:
+    \vspace{0.5cm}
+    \begin{itemize}
+      \setlength\itemsep{2.0em}
+      \item{$r_D^{K\pi}\cos\delta_D^{K\pi} = \SI{-0.0588(52)}{}$}
+      \begin{itemize}
+        \item{$K_{S, L}^2\pi^+\pi^-$}
+        \item{CP tags}
+      \end{itemize}
+      \item{$r_D^{K\pi}\sin\delta_D^{K\pi} = \SI{-0.010(14)}{}$}
+      \begin{itemize}
+        \item{$K_{S, L}^0\pi^+\pi^-$}
+      \end{itemize}
+    \end{itemize}
+    \column{0.65\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{delta_kpi_combination.pdf}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Summary}
+  \begin{itemize}
+    \item{Have performed an updated measurement of $\mathcal{A}_{K\pi} = \SI{0.127(12)}{}$}
+    \item{As part of this analysis, BR of three $K_LX$ modes in a manner independent of flavour-tag input were determined}
+    \begin{itemize}
+      \item{These will be valuable inputs for future strong-phase studies}
+    \end{itemize}
+    \item{Have fitted $K^-\pi^+$ vs $K_{S, L}\pi^+\pi^-$ in bins of phase space}
+    \begin{itemize}
+      \item{Gain sensitivity to both $r_D^{K\pi}\cos\delta_D^{K\pi}$ and $r_D^{K\pi}\sin\delta_D^{K\pi}$}
+    \end{itemize}
+    \item{Final result: $\delta_D^{K\pi} = \big(188.7^{+11.2}_{-13.0}\big)^\circ$}
+    \item{Precision compares favourably with that from ensemble of charm-mixing data, will improve significantly with increase in data set foreseen at $\psi(3770)$}
+    \item{MEMO in preparation, and will be circulated in coming week}
+  \end{itemize}
+  \begin{center}
+    {\huge Thank you!}
+  \end{center}
+\end{frame}
+    
 
 \end{document}
